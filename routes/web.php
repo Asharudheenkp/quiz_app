@@ -8,6 +8,7 @@ use Inertia\Inertia;
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/quiz/{category}', [HomeController::class, 'quiz'])->name('quiz');
 });
 
 
